@@ -170,7 +170,7 @@ For the sake of this exercise you will only be dealing with:
 
 Numbers can be converted to other numeric types through Type Conversion.
 
-### Arithmetic Operators
+## Arithmetic Operators (from [exercism.org](https://exercism.org/tracks/go/concepts/arithmetic-operators))
 
 Go supports many standard arithmetic operators:
 
