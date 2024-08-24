@@ -213,3 +213,67 @@ value := float32(2.0) * x // invalid operation: mismatched types float32 and int
 // you must convert int type to float32 before performing arithmetic operation
 value := float32(2.0) * float32(x)
 ```
+
+## Booleans (from [exercism.org](https://exercism.org/tracks/go/concepts/booleans))
+
+Booleans in Go are represented by the predeclared boolean type `bool`, which values can be either
+`true` or `false`. It's a defined type.
+
+```go
+var closed bool    // boolean variable 'closed' implicitly initialized with 'false'
+speeding := true   // boolean variable 'speeding' initialized with 'true'
+hasError := false  // boolean variable 'hasError' initialized with 'false'
+```
+
+Go supports three logical operators that can evaluate expressions down to Boolean values, returning
+either `true` or `false`.
+
+| Operator    | What it means                                 |
+| ----------- | --------------------------------------------- |
+| `&&` (and)  | It is true if both statements are true.       |
+| `\|\|` (or) | It is true if at least one statement is true. |
+| `!` (not)   | It is true only if the statement is false.    |
+
+## Strings (from [exercism.org](https://exercism.org/tracks/go/concepts/strings))
+
+A `string` in Go is an immutable sequence of bytes, which don't necessarily have to represent
+characters.
+
+A string literal is defined between double quotes:
+
+```go
+const name = "Jane"
+```
+
+Strings can be concatenated via the `+` operator:
+
+```go
+"Jane" + " " + "Austen"
+// => "Jane Austen"
+```
+
+Some special characters need to be escaped with a leading backslash, such as `\t` for a tab and `\n`
+for a new line in strings.
+
+```go
+"How is the weather today?\nIt's sunny"
+// =>
+// How is the weather today?
+// It's sunny
+```
+
+The `strings` package contains many useful functions to work on strings. For more information about
+string functions, check out the [strings package documentation](https://pkg.go.dev/strings). Here
+are some examples:
+
+```go
+import "strings"
+
+// strings.ToLower returns the string given as argument with all its characters lowercased
+strings.ToLower("MaKEmeLoweRCase")
+// => "makemelowercase"
+
+// strings.Repeat returns a string with a substring given as argument repeated many times
+strings.Repeat("Go", 3)
+// => "GoGoGo"
+```
