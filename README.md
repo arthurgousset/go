@@ -323,16 +323,19 @@ Numbers can be converted to other numeric types through Type Conversion.
 
 ## Floating-point numbers (from [exercism.org](https://exercism.org/tracks/go/concepts/floating-point-numbers))
 
-A floating-point number is a number with zero or more digits behind the decimal separator. Examples are `-2.4`, `0.1`, `3.14`, `16.984025` and `1024.0`.
+A floating-point number is a number with zero or more digits behind the decimal separator. Examples
+are `-2.4`, `0.1`, `3.14`, `16.984025` and `1024.0`.
 
-Different floating-point types can store different numbers of digits after the digit separator - this is referred to as its precision.
+Different floating-point types can store different numbers of digits after the digit separator -
+this is referred to as its precision.
 
 Go has two floating-point types:
 
 - `float32`: 32 bits (~6-9 digits precision).
 - `float64`: 64 bits (~15-17 digits precision). This is the default floating-point type.
 
-As can be seen, both types can store a different number of digits. This means that trying to store PI in a `float32` will only store the first 6 to 9 digits (with the last digit being rounded).
+As can be seen, both types can store a different number of digits. This means that trying to store
+PI in a `float32` will only store the first 6 to 9 digits (with the last digit being rounded).
 
 By default, Go will use `float64` for floating-point numbers, unless the floating-point number is:
 
@@ -1090,6 +1093,26 @@ for i := 1; i < 10; i++ {
 
 This loop will print the numbers from `1` to `9` (including `9`). Defining the step is often done
 using an increment or decrement statement, as shown in the example above.
+
+## While loops
+
+Source: [programiz.com](https://www.programiz.com/golang/while-loop)
+
+Unlike other programming languages, Go doesn't have a dedicated keyword for a while loop. However,
+we can use the `for` loop to perform the functionality of a while loop.
+
+Syntax of Go while loop:
+
+```go
+for condition {
+  // code block
+}
+```
+
+Here, the loop evaluates the `condition`. If the condition is:
+
+- `true` - statements inside the loop are executed and `condition` is evaluated again
+- `false` - the loop terminates
 
 ## Randomness (from [exercism.org](https://exercism.org/tracks/go/concepts/randomness))
 
