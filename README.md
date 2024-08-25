@@ -99,7 +99,7 @@ func hi (name string) string {
 }
 ```
 
-### Function Parameters
+#x## Function Parameters
 
 All parameters must be explicitly typed; there is no type inference for parameters. There are no
 default values for parameters so all function parameters are required.
@@ -775,6 +775,28 @@ nextSlice := []int{100,101,102}
 newSlice  := append(withData, nextSlice...)
 // => []int{0,1,2,3,4,5,100,101,102}
 ```
+
+### Copy slices
+
+Use `make([]T, <length>)` to create a slice of type `T` and length `<length>`.
+
+```go
+arr := []int{1, 2, 3}
+tmp := make([]int, len(arr))
+copy(tmp, arr)
+
+fmt.Println(tmp)
+// => [1 2 3]
+fmt.Println(arr)
+// => [1 2 3]
+```
+
+> The
+> built-in [`copy(dst, src)`](http://golang.org/pkg/builtin/#copy) copies `min(len(dst), len(src))` elements.
+> So if your `dst` is empty (`len(dst) == 0`), nothing will be copied.
+> Try `tmp := make([]int, len(arr))` ([Go Playground](https://play.golang.org/p/xwISeGLzxb)):
+
+Source: [stackoverflow.com](https://stackoverflow.com/a/30182622)
 
 ## Variadic Functions (from [exercism.org](https://exercism.org/tracks/go/concepts/variadic-functions))
 
