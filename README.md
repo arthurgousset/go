@@ -1389,6 +1389,22 @@ for i := range arr {
 // 2
 ```
 
+## Type Definitions (from [exercism.org](https://exercism.org/tracks/go/concepts/type-definitions))
+
+We've already seen struct types; to recap a `struct` is a sequence of named elements
+called *fields*, each field having a name and type. The name of a field must be unique within the
+struct. Structs can be compared with the *class* in the Object Oriented Programming paradigm.
+
+You create a new struct by using the `type` and `struct` keywords, then explicitly define the name
+and type of the fields as shown in the example below.
+
+```
+type StructName struct{
+    field1 fieldType1
+    field2 fieldType2
+}
+```
+
 ### Non-struct types
 
 You've previously seen defining struct types. It is also possible to define non-struct types which
